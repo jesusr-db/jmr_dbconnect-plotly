@@ -175,7 +175,7 @@ def update_trip_count(greaterThan):
     ],
 )
 
-config = Config(profile="PROFILE", cluster_id="CLUSTER_ID")
+config = Config(profile="DEFAULT", cluster_id="0606-185818-kc16dq9w")
 spark = SparkSession.builder.sdkConfig(config).getOrCreate()
 
 
@@ -236,4 +236,4 @@ def update_output(zip_plot, column_map_show):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8049, use_reloader=False)
